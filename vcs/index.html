@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Muhammad Arwan Maulana - Cyber Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <div class="main-container">
+    <div class="header-controls">
+      <button class="icon-btn" onclick="cycleTheme()">🎨 <span id="themeLabel">Cyber</span></button>
+    </div>
+
+    <div class="profile-header">
+      <div class="profile-img-wrapper">
+        <img src="profile.jpg" alt="Muhammad Arwan Maulana" class="profile-img" onerror="this.src='https://via.placeholder.com/140?text=MAM'">
+        <div class="status-badge" title="Active Student"></div>
+      </div>
+      <h1>Muhammad Arwan Maulana</h1>
+      <div class="nim-badge" onclick="copyNIM()">
+        📋 NIM: G.231.23.0155
+      </div>
+    </div>
+
+    <nav class="nav-tabs">
+      <button class="tab-btn active" onclick="openTab(event, 'about')">Profil</button>
+      <button class="tab-btn" onclick="openTab(event, 'experience')">Aktivitas & Hobi</button>
+      <button class="tab-btn" onclick="openTab(event, 'terminal')">Dev Terminal</button>
+    </nav>
+
+    <!-- Tab 1: About -->
+    <div id="about" class="tab-content active">
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>Status Mahasiswa</h4>
+          <p>Aktif Mahasiswa Teknik Informatika / Ilmu Komputer.</p>
+        </div>
+        <div class="info-card">
+          <h4>Lokasi</h4>
+          <p>Semarang, Jawa Tengah, Indonesia</p>
+        </div>
+        <div class="info-card">
+          <h4>Minat & Fokus</h4>
+          <p>Web Development, Software Engineering & Outdoor Exploration.</p>
+        </div>
+        <div class="info-card">
+          <h4>Platform</h4>
+          <p>GitHub Pages & Interactive Portfolios</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Outdoor & Experience -->
+    <div id="experience" class="tab-content">
+      <p style="color: var(--subtext-color); margin-bottom: 15px;">
+        Selain fokus dalam dunia teknologi dan pemrograman, saya menyukai tantangan alam terbuka seperti mendaki gunung.
+      </p>
+      <div class="photo-preview-card">
+        <img src="profile.jpg" alt="Puncak Gunung Merbabu" onerror="this.src='https://via.placeholder.com/800x400?text=Mt.+Merbabu+3142+MDPL'">
+        <div class="photo-overlay">
+          <h5>🏔️ Puncak Kenteng Songo - Mt. Merbabu (3142 MDPL)</h5>
+          <p>Taman Nasional Gunung Merbabu, Indonesia</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Terminal -->
+    <div id="terminal" class="tab-content">
+      <div class="terminal-box">
+        <p>> system.init_profile('Muhammad Arwan Maulana')</p>
+        <p>> status: READY</p>
+        <p>> nim: G.231.23.0155</p>
+        <p>> location: Semarang, Central Java</p>
+        <p>> achievement: Reached Kenteng Songo Peak (3142 MDPL)</p>
+        <p>> type 'help' or click tabs to navigate.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">NIM berhasil disalin!</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
